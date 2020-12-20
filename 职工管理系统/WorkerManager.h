@@ -16,6 +16,7 @@ class WorkerManager
 public:
     //当前储存的员工的人数
     int m_worker_num;
+	//使用对象数组来保存职工对象
     Worker **m_worker_arry;
 	bool m_file_empty;
 public:

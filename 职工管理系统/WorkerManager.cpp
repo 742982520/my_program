@@ -4,7 +4,6 @@ WorkerManager::WorkerManager()
 {
 	ifstream ifs;
 	ifs.open(SAVA_PATH,ios::in);
-
 	//如果文件不存在
 	if(!ifs.is_open())
 	{
@@ -18,9 +17,10 @@ WorkerManager::WorkerManager()
 		ifs.close();
 		return;
 	}
-
 	//如果文件存在，但是是空的
 	char ch;
+	//读取结束字符后，如果ifs.eof返回1,则为空文件
+	//如果ifs.eof返回0，则不为空
 	ifs >> ch;
 	if(ifs.eof())
 	{
